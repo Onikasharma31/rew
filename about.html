@@ -1,271 +1,278 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>About Us - Rajesh Engineering Works</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us | Rajesh Engineering Works</title>
+<meta name="description" content="Sheet metal fabrication and ETP plant manufacturing since 1997. Learn about Rajesh Engineering Works, Faridabad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --graphite:#14181d; --graphite-2:#1d242c; --steel:#e9ecef; --steel-2:#d5dae0;
+  --paper:#f7f8f9; --ink:#171c22; --muted:#5d6874; --arc:#35b4ff; --arc-deep:#0b6fb3;
+  --head:'Barlow Condensed','Arial Narrow',sans-serif; --body:'IBM Plex Sans',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--arc);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.05;font-weight:700;letter-spacing:.01em}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(20,24,29,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-family:var(--head);font-size:1.45rem;font-weight:600}
+.brand img{height:38px;width:auto}
+.menu{display:flex;gap:28px;list-style:none}
+.menu a{color:#c9d1d9;text-decoration:none;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.menu a:hover,.menu a[aria-current]{color:#fff;border-color:var(--arc)}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:8px 14px;font:inherit;cursor:pointer}
+
+/* Hero */
+.hero{position:relative;background:var(--graphite);color:#fff;padding:160px 0 90px;overflow:hidden;
+  background-image:radial-gradient(circle at center,rgba(255,255,255,.09) 0 5px,transparent 6px);background-size:34px 34px}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,var(--graphite) 40%,rgba(20,24,29,.6) 80%,rgba(20,24,29,.9))}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(3.2rem,9vw,7rem);text-transform:uppercase}
+.hero .tag{font-family:var(--head);font-size:clamp(1.5rem,3.5vw,2.3rem);color:var(--arc);margin-top:14px;font-weight:600;max-width:20ch;line-height:1.1}
+.hero p{max-width:620px;margin-top:24px;font-size:1.12rem;color:#b9c3cd}
+.cut{display:block;width:min(560px,90%);height:14px;margin-top:28px}
+.cut path{stroke:var(--arc);stroke-width:3;fill:none;stroke-dasharray:600;stroke-dashoffset:600;filter:drop-shadow(0 0 6px var(--arc));animation:cut 1.8s .3s ease-out forwards}
+@keyframes cut{to{stroke-dashoffset:0}}
+
+.btn{display:inline-block;padding:14px 30px;font-family:var(--head);font-size:1.15rem;font-weight:600;letter-spacing:.04em;text-decoration:none;
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));transition:.2s;border:0;cursor:pointer}
+.btn-p{background:var(--arc);color:#04121d}.btn-p:hover{background:#fff}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+
+/* Stats */
+.stats{background:var(--arc);color:#04121d}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:28px 20px;border-right:1px solid rgba(4,18,29,.2)}
+.stat:last-child{border:0}
+.stat b{display:block;font-family:var(--head);font-size:3rem;line-height:1}
+.stat span{font-size:.95rem;font-weight:500}
+
+section{padding:96px 0}
+.sec-head{max-width:640px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.sec-head p{color:var(--muted);margin-top:12px}
+
+/* Who we are */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.split p{color:var(--muted);max-width:56ch}
+.split p+p{margin-top:16px}
+.parts{list-style:none;border-top:4px solid var(--graphite);background:#fff;border-left:1px solid var(--steel-2);border-right:1px solid var(--steel-2);
+  clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%)}
+.parts li{padding:18px 24px;border-bottom:1px solid var(--steel-2);font-family:var(--head);font-size:1.5rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.parts li small{font-family:var(--body);font-size:.82rem;font-weight:400;color:var(--muted)}
+.parts li:hover{background:var(--steel)}
+
+/* ETP */
+.etp{background:var(--graphite);color:#fff}
+.etp .sec-head p{color:#9aa6b2;max-width:60ch}
+.etp .big{font-family:var(--head);font-size:clamp(5rem,14vw,10rem);line-height:.85;color:var(--arc);font-weight:700}
+.etp .big small{display:block;font-size:1.5rem;color:#fff;margin-top:10px;font-weight:600}
+.etp .split{align-items:center}
+.etp p{color:#b9c3cd}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{padding:8px 18px;border:1px solid rgba(53,180,255,.5);color:#fff;font-family:var(--head);font-size:1.2rem;font-weight:600;
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
+
+/* Tech */
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:40px}
+.tcard{background:#fff;border:1px solid var(--steel-2);border-top:4px solid var(--arc-deep);padding:26px 24px 30px;transition:transform .25s,border-color .25s}
+.tcard:hover{transform:translateY(-5px);border-top-color:var(--graphite)}
+.tcard h3{font-size:1.6rem;margin-bottom:8px}
+.tcard p{font-size:.95rem;color:var(--muted)}
+.lead{max-width:62ch;color:var(--muted);font-size:1.08rem}
+
+/* Closing */
+.closing{background:var(--steel);text-align:center}
+.closing p{max-width:60ch;margin:0 auto;color:var(--muted)}
+.closing h2{font-size:clamp(2.6rem,7vw,5.2rem);margin:28px 0 8px;font-style:italic}
+.closing .actions{justify-content:center}
+
+/* Contact */
+.contact{background:var(--graphite);color:#fff}
+.cols{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.contact .sec-head p{color:#9aa6b2}
+form label{display:block;font-weight:500;font-size:.92rem;margin:0 0 6px}
+form .f{margin-bottom:18px}
+form input[type=text],form input[type=email],form textarea{width:100%;padding:14px 16px;font:inherit;color:var(--ink);border:1px solid var(--steel-2);border-bottom:3px solid var(--arc);background:#fff;border-radius:0}
+form input:focus,form textarea:focus{outline:none;border-bottom-color:var(--arc-deep)}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.info{display:grid;gap:26px}
+.info h3{font-size:1.5rem;margin-bottom:6px}
+.info a{text-decoration:none;color:var(--arc)}
+.info a:hover{text-decoration:underline}
+.info .line{margin-bottom:6px}
+.wa{display:inline-flex;align-items:center;gap:5px}
+.wa img{height:16px;width:16px}
+footer{background:#0d1014;color:#8e9aa6;text-align:center;padding:28px 24px;font-size:.9rem}
+
+@media(max-width:860px){
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid rgba(4,18,29,.2)}
+  .split,.cols{grid-template-columns:1fr;gap:40px}
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--graphite);padding:8px 24px 18px}
+  .menu.open{display:flex}
+  .menu a{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  section{padding:70px 0}
+  .hero{padding:125px 0 70px}
+  form .row{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .cut path{animation:none;stroke-dashoffset:0}
+  .tcard{transition:none}
+}
+</style>
 </head>
+<body>
 
-<body class="is-preload">
-
-	<!-- Wrapper -->
-	<div id="wrapper">
-
-		<!-- Header -->
-	<header id="header" class="alt">
-  <a href="index.html" class="logo">
-    <img src="images/logo.png" alt="Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
-    <strong></strong> <span>Rajesh Engineering Works</span>
-  </a>
-  <nav>
-    <a href="#menu">Menu</a>
-  </nav>
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="Rajesh Engineering Works logo">Rajesh Engineering Works</a>
+    <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Product Gallery</a></li>
+      <li><a href="about.html" aria-current="page">About Us</a></li>
+      <li><a href="journey.html">Our Growth Journey</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </header>
 
+<main>
+<div class="hero">
+  <div class="wrap">
+    <h1>About us</h1>
+    <div class="tag">Driven by precision. Defined by integrity.</div>
+    <svg class="cut" viewBox="0 0 560 14" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7 H380 L392 2 L404 12 L416 2 L428 12 L440 7 H560"/></svg>
+    <p>Rajesh Engineering Works is a multi-disciplinary engineering firm in sheet metal fabrication and Effluent Treatment Plant (ETP) manufacturing. Founded in 1997, we are a trusted partner to public and private sector clients, delivering precise, reliable engineering solutions.</p>
+  </div>
+</div>
 
-		<!-- Menu -->
-		<nav id="menu">
-			<ul class="links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="gallery.html">Product Gallery</a></li>
-				<li><a href="about.html">About Us</a></li> 
-				<li><a href="journey.html">Our Growth Journey</a></li> 
-				
-				
-			</ul>
-			
-		</nav>
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>1997</b><span>Year founded</span></div>
+    <div class="stat"><b>25+</b><span>Years of experience</span></div>
+    <div class="stat"><b>5+</b><span>Countries served</span></div>
+    <div class="stat"><b>11,700</b><span>sq.ft. factory space</span></div>
+  </div>
+</div>
 
+<section id="who">
+  <div class="wrap split">
+    <div>
+      <div class="sec-head" style="margin-bottom:24px"><h2>Who we are</h2></div>
+      <p>With decades of hands-on experience, we design, fabricate and manufacture a wide range of sheet metal components.</p>
+      <p>Our in-house capabilities and skilled team let us take on small and large fabrication projects with the same uncompromising quality standards.</p>
+    </div>
+    <ul class="parts">
+      <li>E-rickshaw chassis <small>Vehicle</small></li>
+      <li>Electric panel boxes <small>Electrical</small></li>
+      <li>Engine canopies <small>Power</small></li>
+      <li>Server racks <small>IT</small></li>
+      <li>Custom sheet metal structures <small>Made to drawing</small></li>
+    </ul>
+  </div>
+</section>
 
+<section class="etp" id="etp">
+  <div class="wrap split">
+    <div class="big">20+<small>years in ETP plants</small></div>
+    <div>
+      <div class="sec-head" style="margin-bottom:22px"><h2>ETP plant experts</h2></div>
+      <p>For over 20 years we have designed, manufactured and commissioned Effluent Treatment Plants for clients across India and abroad.</p>
+      <p style="margin-top:14px">Our municipal and industrial projects cover wastewater treatment and water purification. We deliver end-to-end solutions that meet environmental and regulatory standards.</p>
+      <div class="chips" aria-label="Countries served">
+        <span class="chip">India</span><span class="chip">South Africa</span><span class="chip">Congo</span><span class="chip">Nepal</span><span class="chip">Bangladesh</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<!-- Main -->
-		<div id="main">
+<section id="tech">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:20px"><h2>Technology and expertise</h2></div>
+    <p class="lead">We combine traditional engineering knowledge with modern technology. Computer-Aided Design and Drafting (CADD) improves design accuracy, speeds up projects and keeps our engineers and your team in step.</p>
+    <div class="tech-grid">
+      <div class="tcard"><h3>Higher quality</h3><p>Accurate drawings mean parts that fit the first time.</p></div>
+      <div class="tcard"><h3>Lower costs</h3><p>Less rework and waste keeps operating costs down.</p></div>
+      <div class="tcard"><h3>Faster delivery</h3><p>Clear designs shorten the time from order to dispatch.</p></div>
+      <div class="tcard"><h3>Lasting value</h3><p>Sustainable, high-value solutions built to run for years.</p></div>
+    </div>
+  </div>
+</section>
 
-			<!-- One -->
-			<section id="one">
-				<div class="inner">
-					<header class="major">
-						<h1>About Us</h1>
-					</header>
-					<h2>Driven by Precision. Defined by Integrity.</h2>
-					<p>
-						Rajesh Engineering Works is a dynamic, multi-disciplinary engineering firm with a strong
-						reputation in the field of sheet metal fabrication and Effluent Treatment Plant (ETP)
-						manufacturing. Founded in 1997, we have grown to become a trusted partner for both public and
-						private sector clients, delivering high-quality engineering solutions with precision and
-						reliability.
-					</p>
-				</div>
-			</section>
+<section class="closing">
+  <div class="wrap">
+    <p>Rajesh Engineering Works stands for innovation, integrity and excellence. From precision sheet metal fabrication to complex ETP systems, we are committed to the highest quality in every product and service.</p>
+    <h2>Let&rsquo;s build the future together.</h2>
+    <div class="actions"><a href="#contact" class="btn btn-p">Get a quote</a></div>
+  </div>
+</section>
 
-			<!-- Two -->
+<section class="contact" id="contact">
+  <div class="wrap cols">
+    <div>
+      <div class="sec-head" style="margin-bottom:28px">
+        <h2>Tell us what you need made</h2>
+        <p>Send your requirement or drawing details. We reply with a quote.</p>
+      </div>
+      <form method="POST" action="https://formsubmit.co/795bab99cd066ebd13c470f0e148092f">
+        <input type="hidden" name="_subject" value="New Inquiry from Rajesh Engineering Works Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://rajeshenggworks.com/thank-you.html">
+        <div class="row">
+          <div class="f"><label for="name">Name</label><input type="text" name="name" id="name" required></div>
+          <div class="f"><label for="email">Email</label><input type="email" name="email" id="email" required></div>
+        </div>
+        <div class="f"><label for="message">Message</label><textarea name="message" id="message" rows="6" required></textarea></div>
+        <div class="actions" style="margin-top:0">
+          <button type="submit" class="btn btn-p">Send message</button>
+          <button type="reset" class="btn" style="background:rgba(255,255,255,.14);color:#fff">Clear</button>
+        </div>
+      </form>
+    </div>
 
-			<section id="two">
-				<div class="inner">
-					<header class="major">
+    <div class="info">
+      <div>
+        <h3>Email</h3>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rew2005@rediffmail.com&su=Inquiry%20from%20Website&body=Hello%20Rajesh%20Engineering%20Works,%0A%0AI'd%20like%20to%20know%20more%20about...">rew2005@rediffmail.com</a>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <div class="line"><a href="tel:+918383903799">+91-8383903799</a> &nbsp;|&nbsp; <a class="wa" href="https://wa.me/918383903799" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="">WhatsApp</a></div>
+        <div class="line"><a href="tel:+919811207342">+91-9811207342</a> &nbsp;|&nbsp; <a class="wa" href="https://wa.me/919811207342" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="">WhatsApp</a></div>
+        <div class="line"><a href="tel:+917678499557">+91-7678499557</a> &nbsp;|&nbsp; <a class="wa" href="https://wa.me/917678499557" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="">WhatsApp</a></div>
+      </div>
+      <div>
+        <h3>Address</h3>
+        <a href="https://maps.app.goo.gl/3G4djET5Ncg7WZ6r8" target="_blank" rel="noopener">Rajesh Engineering Works<br>Plot no. 5, Sarurpur Industrial Area, Faridabad<br>Haryana, India</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
 
-						<h2>Who We Are</h2>
-						</header>
-						<p>With decades of hands-on experience, we specialize in the design, fabrication, and
-							manufacturing of a wide range of sheet metal components including:</p>
-						<ul>
-							<li>E-rickshaw chassis</li>
-							<li>Electric panel boxes</li>
-							<li>Engine canopies</li>
-							<li>Server racks</li>
-							<li>Custom sheet metal structures</li>
+<footer>&copy; Rajesh Engineering Works. All rights reserved.</footer>
 
-						</ul>
-						<p>Our in-house capabilities and skilled team allow us to take on both small- and large-scale
-							fabrication projects with uncompromising quality standards.</p>
-
-				</div>
-			</section>
-
-			<!-- Three -->
-
-				<section id="three">
-				<div class="inner">
-					<header class="major">
-
-						<h2>ETP Plant Experts</h2>
-						</header>
-						<p>For over 20 years, Rajesh Engineering Works has been at the forefront of Effluent Treatment Plant (ETP) design, manufacturing, and commissioning—serving clients across India and internationally in countries such as South Africa, Congo, Nepal, and Bangladesh.<br>
-
-Our portfolio includes municipal and industrial projects for wastewater treatment and water purification, where we deliver end-to-end solutions that meet environmental and regulatory standards.</p>
-						
-						
-
-				</div>
-			</section>
-
-			<!-- four -->
-
-				<section id="four">
-				<div class="inner">
-					<header class="major">
-
-						<h2>Technology & Expertise</h2>
-						</header>
-						<p>We combine traditional engineering knowledge with state-of-the-art technology to deliver superior results. Our use of Computer-Aided Design and Drafting (CADD) systems enhances design accuracy, improves project efficiency, and ensures seamless collaboration between our engineering teams and clients.</p>
-						<p>This approach helps us:</p>
-
-						<ul>
-							<li>Increase production quality</li>
-							<li>Reduce operational costs</li>
-							<li>Accelerate project timelines</li>
-							<li>Deliver high-value, sustainable solutions</li>
-							
-
-						</ul>
-						
-				</div>
-			</section>
-
-			<!-- five -->
-
-				<section id="two">
-				<div class="inner">
-					<header class="major">
-
-						
-						</header>
-						<p>Rajesh Engineering Works stands for innovation, integrity, and excellence in engineering. Whether it's precision sheet metal fabrication or complex ETP systems, we are committed to delivering the highest quality products and services to meet your needs.</p>
-						<h2><i>Let’s build the future together.</i></h2>
-						
-
-				</div>
-			</section>
-
-		</div>
-
-		<!-- Contact -->
-		<section id="contact">
-			<div class="inner">
-				<section>
-					<form method="POST" action="https://formsubmit.co/rew2005@rediffmail.com">
-						<!-- Hidden configuration fields -->
-						<input type="hidden" name="_subject" value="New Inquiry from Rajesh Engineering Works Website">
-						<input type="hidden" name="_captcha" value="false">
-					 <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
-                     
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" required />
-							</div>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" required />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="6" required></textarea>
-							</div>
-						</div>
-
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
-							<li><input type="reset" value="Clear" /></li>
-						</ul>
-
-					</form>
-				</section>
-
-
-
-				<section class="split">
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-envelope"></span>
-							<h3>Email</h3>
-						<a href="https://mail.google.com/mail/?view=cm&fs=1&to=rew2005@rediffmail.com&su=Inquiry%20from%20Website&body=Hello%20Rajesh%20Engineering%20Works,%0A%0AI'd%20like%20to%20know%20more%20about...">
-    rew2005@rediffmail.com
-</a>
-
-
-						</div>
-					</section>
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-phone"></span>
-							<h3>Phone</h3>
-							<!-- Number 1 -->
-							<!-- Contact Number 1 -->
-							<span>
-	<a href="tel:+918383903799"> +91-8383903799</a> &nbsp; | &nbsp;
-	<a href="https://wa.me/918383903799" target="_blank">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-			alt="WhatsApp" style="height:16px; vertical-align:middle; margin-right:4px;">
-		WhatsApp
-	</a>
-</span>
-
-							<br>
-
-							<!-- Contact Number 2 -->
-							<span>
-								<a href="tel:+919811207342"> +91-9811207342</a> &nbsp; | &nbsp;
-								<a href="https://wa.me/919811207342" target="_blank">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-										alt="WhatsApp" style="height:16px; vertical-align:middle; margin-right:4px;">
-									WhatsApp
-								</a>
-							</span>
-							<br>
-
-							<!-- Contact Number 3 -->
-							<span>
-								<a href="tel:+917678499557"> +91-7678499557</a> &nbsp; | &nbsp;
-								<a href="https://wa.me/917678499557" target="_blank">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-										alt="WhatsApp" style="height:16px; vertical-align:middle; margin-right:4px;">
-									WhatsApp
-								</a>
-							</span>
-
-
-						</div>
-					</section>
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-home"></span>
-							<h3>Address</h3>
-							<a href="https://maps.app.goo.gl/3G4djET5Ncg7WZ6r8"
-								target="_blank"><span>Rajesh Engineering Works.<br />
-									Plot no. 5, Sarurpur Industrial Area Faridabad<br />
-									Haryana , India</span></a>
-						</div>
-					</section>
-				</section>
-			</div>
-		</section>
-		<section style="display: flex; justify-content: center; align-items: center; height: 100px;">
-			<div class="copyright">
-				<p>&copy; Rajesh Engineering Works. All rights reserved.</p>
-			</div>
-		</section>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
+<script>
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+</script>
 </body>
-
 </html>
